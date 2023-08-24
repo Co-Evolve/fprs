@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fprs package &mdash; fprs v0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            fprs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">fprs package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-fprs.parameters">fprs.parameters module</a></li>
+<li><a class="reference internal" href="#module-fprs.robot">fprs.robot module</a></li>
+<li><a class="reference internal" href="#module-fprs.specification">fprs.specification module</a></li>
+<li><a class="reference internal" href="#module-fprs.specification_parameterizer">fprs.specification_parameterizer module</a></li>
+<li><a class="reference internal" href="#module-fprs">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">fprs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">fprs package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fprs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="fprs-package">
+<h1>fprs package<a class="headerlink" href="#fprs-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-fprs.parameters">
+<span id="fprs-parameters-module"></span><h2>fprs.parameters module<a class="headerlink" href="#module-fprs.parameters" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.parameters.ContinuousParameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.parameters.</span></span><span class="sig-name descname"><span class="pre">ContinuousParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/parameters.html#ContinuousParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.ContinuousParameter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.parameters.Parameter</span></code></a></p>
+<p>Parameter with a constrained, continuous value. If an initial value is not given, a random value within the
+boundaries will be generated.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.parameters.ContinuousParameter.set_random_value">
+<span class="sig-name descname"><span class="pre">set_random_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/parameters.html#ContinuousParameter.set_random_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.ContinuousParameter.set_random_value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.parameters.ContinuousParameter.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#fprs.parameters.ContinuousParameter.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.parameters.DiscreteParameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.parameters.</span></span><span class="sig-name descname"><span class="pre">DiscreteParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">fprs.parameters.T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">fprs.parameters.T</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/parameters.html#DiscreteParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.DiscreteParameter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.parameters.Parameter</span></code></a></p>
+<p>Parameter representing a discrete value from a given list of options.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.parameters.DiscreteParameter.set_random_value">
+<span class="sig-name descname"><span class="pre">set_random_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/parameters.html#DiscreteParameter.set_random_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.DiscreteParameter.set_random_value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.parameters.DiscreteParameter.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">fprs.parameters.T</span></em><a class="headerlink" href="#fprs.parameters.DiscreteParameter.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.parameters.FixedParameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.parameters.</span></span><span class="sig-name descname"><span class="pre">FixedParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fprs.parameters.T</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/parameters.html#FixedParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.FixedParameter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.parameters.Parameter</span></code></a></p>
+<p>Parameter that never changes its value.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.parameters.FixedParameter.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">fprs.parameters.T</span></em><a class="headerlink" href="#fprs.parameters.FixedParameter.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.parameters.Parameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.parameters.</span></span><span class="sig-name descname"><span class="pre">Parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fprs.parameters.T</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/parameters.html#Parameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.Parameter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for parameters.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.parameters.Parameter.set_random_value">
+<span class="sig-name descname"><span class="pre">set_random_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/parameters.html#Parameter.set_random_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.Parameter.set_random_value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.parameters.Parameter.value">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">fprs.parameters.T</span></em><a class="headerlink" href="#fprs.parameters.Parameter.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.parameters.SynchronizedParameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.parameters.</span></span><span class="sig-name descname"><span class="pre">SynchronizedParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">linked_parameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><span class="pre">fprs.parameters.Parameter</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/parameters.html#SynchronizedParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.parameters.SynchronizedParameter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.parameters.FixedParameter" title="fprs.parameters.FixedParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.parameters.FixedParameter</span></code></a></p>
+<p>Parameter that maintains the value of another parameter.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.parameters.SynchronizedParameter.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">fprs.parameters.T</span></em><a class="headerlink" href="#fprs.parameters.SynchronizedParameter.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-fprs.robot">
+<span id="fprs-robot-module"></span><h2>fprs.robot module<a class="headerlink" href="#module-fprs.robot" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.robot.Controller">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.robot.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.ControllerSpecification" title="fprs.specification.ControllerSpecification"><span class="pre">fprs.specification.ControllerSpecification</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/robot.html#Controller"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.robot.Controller" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract base class for a robot’s Controller.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.robot.Controller.controller_specification">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">controller_specification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.specification.ControllerSpecification" title="fprs.specification.ControllerSpecification"><span class="pre">fprs.specification.ControllerSpecification</span></a></em><a class="headerlink" href="#fprs.robot.Controller.controller_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.robot.Morphology">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.robot.</span></span><span class="sig-name descname"><span class="pre">Morphology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.MorphologySpecification" title="fprs.specification.MorphologySpecification"><span class="pre">fprs.specification.MorphologySpecification</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/robot.html#Morphology"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.robot.Morphology" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract base class for a robot’s Morphology.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.robot.Morphology.morphology_specification">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">morphology_specification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.robot.Morphology" title="fprs.robot.Morphology"><span class="pre">fprs.robot.Morphology</span></a></em><a class="headerlink" href="#fprs.robot.Morphology.morphology_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.robot.Robot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.robot.</span></span><span class="sig-name descname"><span class="pre">Robot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/robot.html#Robot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.robot.Robot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract base class for a robot, which expresses the combination of a Morphology and a Controller.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.robot.Robot.controller">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">controller</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.robot.Controller" title="fprs.robot.Controller"><span class="pre">fprs.robot.Controller</span></a></em><a class="headerlink" href="#fprs.robot.Robot.controller" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.robot.Robot.morphology">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">morphology</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.robot.Morphology" title="fprs.robot.Morphology"><span class="pre">fprs.robot.Morphology</span></a></em><a class="headerlink" href="#fprs.robot.Robot.morphology" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.robot.Robot.robot_specification">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">robot_specification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a></em><a class="headerlink" href="#fprs.robot.Robot.robot_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-fprs.specification">
+<span id="fprs-specification-module"></span><h2>fprs.specification module<a class="headerlink" href="#module-fprs.specification" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification.ControllerSpecification">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification.</span></span><span class="sig-name descname"><span class="pre">ControllerSpecification</span></span><a class="reference internal" href="_modules/fprs/specification.html#ControllerSpecification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification.ControllerSpecification" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.specification.Specification</span></code></a></p>
+<p>Abstract base class to represent a parameterized controller specification.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification.MorphologySpecification">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification.</span></span><span class="sig-name descname"><span class="pre">MorphologySpecification</span></span><a class="reference internal" href="_modules/fprs/specification.html#MorphologySpecification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification.MorphologySpecification" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.specification.Specification</span></code></a></p>
+<p>Abstract base class to represent a parameterized morphology specification.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification.RobotSpecification">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification.</span></span><span class="sig-name descname"><span class="pre">RobotSpecification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">morphology_specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.MorphologySpecification" title="fprs.specification.MorphologySpecification"><span class="pre">fprs.specification.MorphologySpecification</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.ControllerSpecification" title="fprs.specification.ControllerSpecification"><span class="pre">fprs.specification.ControllerSpecification</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/specification.html#RobotSpecification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification.RobotSpecification" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.specification.Specification</span></code></a></p>
+<p>Abstract base class to represent a parameterized robot specification, which combines a parameterized morphology
+specification and a parameterized controller specification.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.specification.RobotSpecification.controller_specification">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">controller_specification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.specification.ControllerSpecification" title="fprs.specification.ControllerSpecification"><span class="pre">fprs.specification.ControllerSpecification</span></a></em><a class="headerlink" href="#fprs.specification.RobotSpecification.controller_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.specification.RobotSpecification.morphology_specification">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">morphology_specification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#fprs.specification.MorphologySpecification" title="fprs.specification.MorphologySpecification"><span class="pre">fprs.specification.MorphologySpecification</span></a></em><a class="headerlink" href="#fprs.specification.RobotSpecification.morphology_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification.Specification">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification.</span></span><span class="sig-name descname"><span class="pre">Specification</span></span><a class="reference internal" href="_modules/fprs/specification.html#Specification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification.Specification" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class to represent a parameterized robot morphology or controller specification. Specifications
+can be saved as pickle files and loaded from pickle files.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification.Specification.load">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><span class="pre">fprs.specification.Specification</span></a></span></span><a class="reference internal" href="_modules/fprs/specification.html#Specification.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification.Specification.load" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fprs.specification.Specification.parameters">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><span class="pre">fprs.parameters.Parameter</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fprs.specification.Specification.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification.Specification.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/specification.html#Specification.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification.Specification.save" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-fprs.specification_parameterizer">
+<span id="fprs-specification-parameterizer-module"></span><h2>fprs.specification_parameterizer module<a class="headerlink" href="#module-fprs.specification_parameterizer" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.ControllerSpecificationParameterizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification_parameterizer.</span></span><span class="sig-name descname"><span class="pre">ControllerSpecificationParameterizer</span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#ControllerSpecificationParameterizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.ControllerSpecificationParameterizer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.specification_parameterizer.SpecificationParameterizer" title="fprs.specification_parameterizer.SpecificationParameterizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.specification_parameterizer.SpecificationParameterizer</span></code></a></p>
+<p>Abstract base class to represent a controller specification parameterizer.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.ControllerSpecificationParameterizer.get_parameter_labels">
+<span class="sig-name descname"><span class="pre">get_parameter_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.ControllerSpecification" title="fprs.specification.ControllerSpecification"><span class="pre">fprs.specification.ControllerSpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#ControllerSpecificationParameterizer.get_parameter_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.ControllerSpecificationParameterizer.get_parameter_labels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.ControllerSpecificationParameterizer.parameterize_specification">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterize_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.ControllerSpecification" title="fprs.specification.ControllerSpecification"><span class="pre">fprs.specification.ControllerSpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#ControllerSpecificationParameterizer.parameterize_specification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.ControllerSpecificationParameterizer.parameterize_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.MorphologySpecificationParameterizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification_parameterizer.</span></span><span class="sig-name descname"><span class="pre">MorphologySpecificationParameterizer</span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#MorphologySpecificationParameterizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.MorphologySpecificationParameterizer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.specification_parameterizer.SpecificationParameterizer" title="fprs.specification_parameterizer.SpecificationParameterizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.specification_parameterizer.SpecificationParameterizer</span></code></a></p>
+<p>Abstract base class to represent a morphology specification parameterizer.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.MorphologySpecificationParameterizer.get_parameter_labels">
+<span class="sig-name descname"><span class="pre">get_parameter_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.MorphologySpecification" title="fprs.specification.MorphologySpecification"><span class="pre">fprs.specification.MorphologySpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#MorphologySpecificationParameterizer.get_parameter_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.MorphologySpecificationParameterizer.get_parameter_labels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.MorphologySpecificationParameterizer.parameterize_specification">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterize_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.MorphologySpecification" title="fprs.specification.MorphologySpecification"><span class="pre">fprs.specification.MorphologySpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#MorphologySpecificationParameterizer.parameterize_specification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.MorphologySpecificationParameterizer.parameterize_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.RobotSpecificationParameterizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification_parameterizer.</span></span><span class="sig-name descname"><span class="pre">RobotSpecificationParameterizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification_generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">morphology_parameterizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification_parameterizer.MorphologySpecificationParameterizer" title="fprs.specification_parameterizer.MorphologySpecificationParameterizer"><span class="pre">fprs.specification_parameterizer.MorphologySpecificationParameterizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_parameterizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification_parameterizer.ControllerSpecificationParameterizer" title="fprs.specification_parameterizer.ControllerSpecificationParameterizer"><span class="pre">fprs.specification_parameterizer.ControllerSpecificationParameterizer</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#RobotSpecificationParameterizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.RobotSpecificationParameterizer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#fprs.specification_parameterizer.SpecificationParameterizer" title="fprs.specification_parameterizer.SpecificationParameterizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">fprs.specification_parameterizer.SpecificationParameterizer</span></code></a></p>
+<p>Abstract base class for robot specification parameterizers, which combines a morphology specification
+parameterizer with a controller specification parameterizer.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.RobotSpecificationParameterizer.generate_parameterized_specification">
+<span class="sig-name descname"><span class="pre">generate_parameterized_specification</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#RobotSpecificationParameterizer.generate_parameterized_specification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.RobotSpecificationParameterizer.generate_parameterized_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.RobotSpecificationParameterizer.get_parameter_labels">
+<span class="sig-name descname"><span class="pre">get_parameter_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#RobotSpecificationParameterizer.get_parameter_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.RobotSpecificationParameterizer.get_parameter_labels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.RobotSpecificationParameterizer.get_target_parameters">
+<span class="sig-name descname"><span class="pre">get_target_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><span class="pre">fprs.parameters.Parameter</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#RobotSpecificationParameterizer.get_target_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.RobotSpecificationParameterizer.get_target_parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.RobotSpecificationParameterizer.parameterize_specification">
+<span class="sig-name descname"><span class="pre">parameterize_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.RobotSpecification" title="fprs.specification.RobotSpecification"><span class="pre">fprs.specification.RobotSpecification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#RobotSpecificationParameterizer.parameterize_specification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.RobotSpecificationParameterizer.parameterize_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.SpecificationParameterizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fprs.specification_parameterizer.</span></span><span class="sig-name descname"><span class="pre">SpecificationParameterizer</span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#SpecificationParameterizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.SpecificationParameterizer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for specification parameterizers, i.e. classes that change specific FixedParameters to
+non-FixedParameters.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.SpecificationParameterizer.get_target_parameters">
+<span class="sig-name descname"><span class="pre">get_target_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><span class="pre">fprs.specification.Specification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fprs.parameters.Parameter" title="fprs.parameters.Parameter"><span class="pre">fprs.parameters.Parameter</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#SpecificationParameterizer.get_target_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.SpecificationParameterizer.get_target_parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.SpecificationParameterizer.num_target_parameters">
+<span class="sig-name descname"><span class="pre">num_target_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><span class="pre">fprs.specification.Specification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#SpecificationParameterizer.num_target_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.SpecificationParameterizer.num_target_parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fprs.specification_parameterizer.SpecificationParameterizer.parameterize_specification">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterize_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fprs.specification.Specification" title="fprs.specification.Specification"><span class="pre">fprs.specification.Specification</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/fprs/specification_parameterizer.html#SpecificationParameterizer.parameterize_specification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.specification_parameterizer.SpecificationParameterizer.parameterize_specification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-fprs">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fprs" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="fprs.set_random_state">
+<span class="sig-prename descclassname"><span class="pre">fprs.</span></span><span class="sig-name descname"><span class="pre">set_random_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fprs.html#set_random_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fprs.set_random_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Dries Marzougui.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
