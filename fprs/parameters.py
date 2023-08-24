@@ -5,12 +5,16 @@ from typing import Iterable, List, Optional, TypeVar
 
 import numpy as np
 
-from fprs import frps_random_state
+from fprs import fprs_random_state
 
 T = TypeVar("T")
 
 
 class Parameter(metaclass=abc.ABCMeta):
+    """
+    Abstract base class for parameters.
+    """
+
     def __init__(
             self,
             value: T
@@ -47,6 +51,10 @@ class Parameter(metaclass=abc.ABCMeta):
 
 
 class FixedParameter(Parameter):
+    """
+    Parameter that never changes its value.
+    """
+
     def __init__(
             self,
             value: T
@@ -77,6 +85,10 @@ class FixedParameter(Parameter):
 
 
 class SynchronizedParameter(FixedParameter):
+    """
+    Parameter that maintains the value of another parameter.
+    """
+
     def __init__(
             self,
             linked_parameter: Parameter
@@ -108,6 +120,9 @@ class SynchronizedParameter(FixedParameter):
 
 
 class ContinuousParameter(Parameter):
+    """Parameter with a constrained, continuous value. If an initial value is not given, a random value within the
+    boundaries will be generated."""
+
     def __init__(
             self,
             low: float = -1.0,
@@ -138,49 +153,12 @@ class ContinuousParameter(Parameter):
     def set_random_value(
             self
             ) -> None:
-        self._value = frps_random_state.uniform(low=self.low, high=self.high)
-
-
-class RangeParameter(Parameter):
-    def __init__(
-            self,
-            low: float = -1.0,
-            high: float = 1.0,
-            value: Optional[np.ndarray] = None
-            ) -> None:
-        super(RangeParameter, self).__init__(value)
-        self.low = low
-        self.high = high
-        self.sorted = sorted
-
-    @property
-    def value(
-            self
-            ) -> np.ndarray:
-        if self._value is None:
-            self.set_random_value()
-
-        self._value = self._value.clip(self.low, self.high)
-        self._value = sorted(np.array(self._value))
-
-        return self._value
-
-    @value.setter
-    def value(
-            self,
-            value
-            ) -> None:
-        assert self.low <= self.value <= self.high, f"[RangeParameter] Given value '{value}' is " \
-                                                    f"not in range [{self.low}, {self.high}]"
-        self._value = value
-
-    def set_random_value(
-            self
-            ) -> None:
-        self._value = frps_random_state.uniform(low=self.low, high=self.high, size=2)
+        self._value = fprs_random_state.uniform(low=self.low, high=self.high)
 
 
 class DiscreteParameter(Parameter):
+    """Parameter representing a discrete value from a given list of options."""
+
     def __init__(
             self,
             options: List[T],
@@ -208,45 +186,4 @@ class DiscreteParameter(Parameter):
     def set_random_value(
             self
             ) -> None:
-        self._value = frps_random_state.choice(a=self.options)
-
-
-class MultiDiscreteParameter(Parameter):
-    def __init__(
-            self,
-            options: List[T],
-            min_size: int = 0,
-            max_size: Optional[int] = None,
-            value: Optional[T] = None,
-            sort: bool = False
-            ):
-        super().__init__(value)
-        self.options = options
-        self.min_size = min_size
-        self.max_size = max_size if max_size is not None else len(options)
-        self.sort = sort
-
-    @property
-    def value(
-            self
-            ) -> np.ndarray:
-        if self._value is None:
-            self.set_random_value()
-        if self.sort:
-            self._value = np.array(sorted(self._value))
-        return self._value
-
-    @value.setter
-    def value(
-            self,
-            value
-            ) -> None:
-        for v in value:
-            assert v in self.options, f"[MultiDiscreteParameter] Given value '{v}' is not in options '{self.options}'"
-        self._value = value
-
-    def set_random_value(
-            self
-            ) -> None:
-        num_parameters = frps_random_state.randint(low=self.min_size, high=self.max_size + 1)
-        self._value = frps_random_state.choice(a=self.options, size=num_parameters, replace=False)
+        self._value = fprs_random_state.choice(a=self.options)

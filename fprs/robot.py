@@ -13,6 +13,8 @@ Actions = TypeVar("Actions")
 
 
 class Robot(ABC):
+    """Abstract base class for a robot, which expresses the combination of a Morphology and a Controller."""
+
     def __init__(
             self,
             specification: RobotSpecification
@@ -63,6 +65,8 @@ class Robot(ABC):
 
 
 class Morphology(ABC):
+    """Abstract base class for a robot's Morphology."""
+
     def __init__(
             self,
             specification: MorphologySpecification
@@ -77,6 +81,8 @@ class Morphology(ABC):
 
 
 class Controller(ABC):
+    """Abstract base class for a robot's Controller."""
+
     def __init__(
             self,
             specification: ControllerSpecification
@@ -94,4 +100,10 @@ class Controller(ABC):
             self,
             observations: np.ndarray
             ) -> np.ndarray:
+        """
+        Returns actions based on given observations.
+
+        :param observations
+        :return: actions
+        """
         raise NotImplementedError
