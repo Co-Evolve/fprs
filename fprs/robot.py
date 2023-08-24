@@ -70,7 +70,7 @@ class Morphology(ABC):
     def __init__(
             self,
             specification: MorphologySpecification
-            ):
+            ) -> None:
         self._specification = specification
 
     @property
@@ -86,7 +86,7 @@ class Controller(ABC):
     def __init__(
             self,
             specification: ControllerSpecification
-            ):
+            ) -> None:
         self._specification = specification
 
     @property
