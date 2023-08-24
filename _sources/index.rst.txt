@@ -3,12 +3,14 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-Welcome to the Framework for defining Parameterized Robot Specification's (FPRS) documentation!
-===============================================================================================
+Welcome to FPRS's documentation!
+================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+FRPS stands for Framework for defining Parameterized Robot Specifications.
 
 This framework defines abstract classes that can simplify and standardize the definition and creation of
 parameterized robot specifications to be used for optimization. We define a robot as a combination of a morphology
