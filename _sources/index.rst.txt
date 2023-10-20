@@ -10,7 +10,7 @@ Welcome to FPRS's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-FRPS stands for Framework for defining Parameterized Robot Specifications.
+FPRS stands for Framework for defining Parameterized Robot Specifications.
 
 This framework defines abstract classes that can simplify and standardize the definition and creation of
 parameterized robot specifications to be used for optimization. We define a robot as a combination of a morphology
