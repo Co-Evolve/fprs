@@ -11,8 +11,8 @@ with open('requirements.txt') as f:
 
 setup(
     name='fprs',
-    version='0.1.0',
-    description='A Framework for defining Parameterized Robot Descriptions.',
+    version='1.0.0',
+    description='A Framework for defining Parameterized Robot Specifications.',
     long_description=readme,
     url='https://github.com/Co-Evolve/fprs',
     license=license,
