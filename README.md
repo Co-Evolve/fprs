@@ -12,4 +12,4 @@ these attributes amenable to optimization.
 
 ## Installation
 
-`python -m pip install git+https://github.com/Co-Evolve/fprs`
+`pip install fprs`
